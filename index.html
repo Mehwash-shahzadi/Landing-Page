@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="sec">
+      <header>
+        <a href="#">
+          <img src="logo.png" alt="" class="logo" />
+        </a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="text">
+          <h2>THAT'S WHAT</h2>
+          <h1>I LIKE</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde optio
+            odio sunt itaque officiis modi dolore, fugiat veniam nostrum
+            maiores! Unde optio odio sunt itaque officiis modi dolore, fugiat
+            veniam nostrum maiores.
+          </p>
+          <button>VIEW ALL PRODUCTS</button>
+        </div>
+        <div class="imgbox">
+          <img src="pepsi1.png" alt="" class="pepsi" />
+        </div>
+      </div>
+
+      <div>
+        <ul class="thumb">
+          <li>
+            <img
+              src="pepsi1.png"
+              onclick="imageslider('pepsi1.png');changeBgColor('#0062be')"
+            />
+          </li>
+          <li>
+            <img
+              src="pepsi2.png"
+              onclick="imageslider('pepsi2.png');changeBgColor('#e60c2c')"
+            />
+          </li>
+          <li>
+            <img
+              src="pepsi3.png"
+              onclick="imageslider('pepsi3.png');changeBgColor('#1e1e1e')"
+            />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <script>
+      function imageslider(anything) {
+        document.querySelector(".pepsi").src = anything;
+      }
+      function changeBgColor(color) {
+        const sec = document.querySelector(".sec");
+        sec.style.background = color;
+      }
+    </script>
+  </body>
+</html>
